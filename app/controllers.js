@@ -9,7 +9,7 @@ app.controller("loginController", function ($scope, $location, $window) {
     $scope.login = function () {
         if ($scope.username == "admin" && $scope.password == "admin") {
             $window.sessionStorage.setItem("isAuth", true);
-            alert("Login Successful");
+            $location.path("dashboard");
         } else {
             setTimeout(() => {
                 $scope.isAlert = true;
