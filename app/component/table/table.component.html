@@ -1,0 +1,81 @@
+
+<div class="navbar-nav-right d-flex align-items-center p-3" id="navbar-collapse">
+  <!-- Search -->
+  <!-- <div class="navbar-nav align-items-center"> -->
+    <div class="input-group input-group-merge">
+      <span class="input-group-text" id="basic-addon-search31"><i class="bx bx-search"></i></span>
+      <input type="text" class="form-control" placeholder="Search User From First Name..." name="search" ng-model="search.firstName">
+    </div>
+  <!-- </div> -->
+</div>
+
+<table class="table table-hover" ng-switch="$ctrl.type">
+  <thead>
+    <tr>
+      <th
+          ng-repeat="ele in $ctrl.tablecols"
+          ng-click="$ctrl.orderBy(ele.value)"
+        >
+          {{ ele.name }}
+        </th>
+    </tr>
+  </thead>
+  <tbody class="table-border-bottom-0" ng-switch-when="employees">
+    <tr ng-repeat="ele in $ctrl.tablerows | filter: search | orderBy: $ctrl.orderByMe" ng-if="$ctrl.tablerows.length > 0">
+      <td>
+        <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
+          <li
+            data-bs-toggle="tooltip"
+            data-popup="tooltip-custom"
+            data-bs-placement="top"
+            class="avatar avatar-xs pull-up"
+            title="{{ ele.firstName + ' ' + ele.lastName }}"
+          >
+            <img
+              src="./assets/img/avatars/5.png"
+              alt="Avatar"
+              class="rounded-circle"
+            />
+          </li>
+        </ul>
+      </td>
+      <td>{{ ele.firstName }}</td>
+      <td>{{ ele.lastName }}</td>
+      <td>{{ ele.email }}</td>
+      <td>{{ ele.dob | date:'dd/MM/yyyy' }}</td>
+      <td>{{ ele.salary | rupeeFilter }}</td>
+      <!-- <td>
+        <div class="dropdown">
+          <button
+            type="button"
+            class="btn p-0 dropdown-toggle hide-arrow"
+            data-bs-toggle="dropdown"
+          >
+            <i class="bx bx-dots-vertical-rounded"></i>
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="javascript:void(0);"
+              ><i class="bx bx-edit-alt me-1"></i> Edit</a
+            >
+            <a class="dropdown-item" href="javascript:void(0);"
+              ><i class="bx bx-trash me-1"></i> Delete</a
+            >
+          </div>
+        </div>
+      </td> -->
+    </tr>
+    <tr class="text-center text-danger" ng-if="$ctrl.tablerows.length === undefined">
+      <td colspan="6">No Record Found</td>
+    </tr>
+  </tbody>
+  <tfoot class="table-border-bottom-0">
+      <tr>
+        <th
+          ng-repeat="ele in $ctrl.tablecols"
+          ng-click="$ctrl.orderBy(ele.value)"
+        >
+          {{ ele.name }}
+        </th>
+      </tr>
+    </tfoot>
+</table>

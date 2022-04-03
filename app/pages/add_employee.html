@@ -1,0 +1,98 @@
+<div class="layout-wrapper layout-content-navbar">
+  <div class="layout-container">
+    <sidebar-component></sidebar-component>
+    <div class="layout-page">
+      <header-component></header-component>
+      <div class="content-wrapper">
+        <div class="container-fluid flex-grow-1 container-p-y">
+          <div class="col-xl">
+
+            <div class="card mb-4">
+              <div class="card-body">
+                <!-- Custom style1 Breadcrumb -->
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb breadcrumb-style1 m-0">
+                    <li class="breadcrumb-item">
+                      <a href="#!/dashboard">Home</a>
+                    </li>
+                    <li class="breadcrumb-item active">Add Employee</li>
+                  </ol>
+                </nav>
+                <!--/ Custom style1 Breadcrumb -->
+              </div>
+            </div>
+
+            <div class="card mb-4">
+              <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Add New Employee</h5>
+              </div>
+              <div class="card-body">
+                <!-- <form>
+                  <div class="mb-3">
+                    <label class="form-label" for="basic-icon-default-firstname">First Name</label>
+                    <div class="input-group input-group-merge">
+                      <span id="basic-icon-default-firstname2" class="input-group-text">
+                        <i class="bx bx-user"></i>
+                      </span>
+                      <input type="text" class="form-control" id="basic-icon-default-firstname" placeholder="Pruthvi" aria-label="Pruthvi" aria-describedby="basic-icon-default-fullname2"
+                      />
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="basic-icon-default-lastname">Last Name</label>
+                    <div class="input-group input-group-merge">
+                      <span id="basic-icon-default-lastname2" class="input-group-text">
+                        <i class="bx bx-user"></i>
+                      </span>
+                      <input type="text" class="form-control" id="basic-icon-default-lastname" placeholder="Dhamecha" aria-label="Dhamecha" aria-describedby="basic-icon-default-fullname2"/>
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label" for="basic-icon-default-dob">Date Of Birth</label>
+                    <div class="input-group input-group-merge">
+                      <span class="input-group-text">
+                        <i class="bx bx-time"></i>
+                      </span>
+                      <input type="date" id="basic-icon-default-dob" class="form-control" aria-describedby="basic-icon-default-dob2"/>
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label" for="basic-icon-default-email">Email</label>
+                    <div class="input-group input-group-merge">
+                      <span class="input-group-text">
+                        <i class="bx bx-envelope"></i>
+                      </span>
+                      <input type="text" id="basic-icon-default-email" class="form-control" placeholder="john.doe" aria-label="john.doe" aria-describedby="basic-icon-default-email2"/>
+                      <span id="basic-icon-default-email2" class="input-group-text">@example.com</span>
+                    </div>
+                    <div class="form-text">You can use letters, numbers & periods</div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="basic-icon-default-salary">Salary</label>
+                    <div class="input-group input-group-merge">
+                      <span class="input-group-text">
+                        <i class="bx bx-rupee"></i>
+                      </span>
+                      <input type="text" id="basic-icon-default-salary" class="form-control" placeholder="10000" aria-label="10000" aria-describedby="basic-icon-default-salary2"/>
+                      <span id="basic-icon-default-salary2" class="input-group-text">₹</span>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Send</button>
+                </form> -->
+
+                <form style="text-align: left;" sf-schema="schema" sf-form="form" sf-model="model" ng-submit="onSubmit()"></form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <pre>
+          {{model | json}}
+        </pre> -->
+        <footer-component></footer-component>
+      </div>
+    </div>
+  </div>
+</div>
