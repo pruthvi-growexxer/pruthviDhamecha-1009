@@ -1,1 +1,1 @@
-var app = angular.module("emsApp", ['ngRoute']);
+var app = angular.module("emsApp", ['ngRoute', 'ngSanitize', 'schemaForm']);
